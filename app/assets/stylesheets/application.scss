@@ -1,0 +1,47 @@
+$black_btn-back_color:#000;
+$black_btn-font_color:#FFF;
+$white_btn-back_color: #FFF;
+$white_btn-font_color: #000;
+
+
+
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    margin: 0;
+}
+
+
+.black_btn{
+    display: block;
+    text-align: center;
+    width: 150px;
+    color: $black_btn-font_color;
+    background-color: $black_btn-back_color;
+    border: #000 solid 1px;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+.white_btn{
+    display: block;
+    text-align: center;
+    width: 150px;
+    color: $white_btn-font_color;
+    background-color: $white_btn-back_color;
+    border: #000 solid 1px;
+    border-radius: 5px;  
+    margin-left: auto;
+    padding: 10px 0;
+
+}

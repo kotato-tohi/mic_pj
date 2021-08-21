@@ -15,31 +15,27 @@
         margin: 0;
     }
 
-    p{
-        margin: 0;
-    }
-
 }
 
 
 .main{
     
-    .login-links{
+    .login_links{
         display: flex;
         margin: 0  auto;
         width: 320px;
         font-size: 12px;
         margin-top: 20px;
-        
-
     }
 
 
-    .sub-msg-panel{
+    .sub_msg_panel{
         text-align: center;
+
         p{
             margin: 0;
         }
+
     }
 
     .panel{
@@ -52,21 +48,22 @@
         box-shadow: 3px 3px 2px;
     
         
-        .panel-title{
+        .panel_title{
             margin: 0 auto;
             font-size: 14px;
             width: 180px;
         }
 
-        .panel-msg{
+        .panel_msg{
             margin: 0 auto;
         }
-        
+
     }
 
-    .last-msg-panel{
+    .last_msg_panel{
         margin-top: 30px;
         text-align: center;
+        
         p{
             margin: 0;
         }
@@ -75,19 +72,20 @@
             margin: 0 auto;
             margin-top: 10px;
         }
-
-
     }
 
-    
 }
 
 .footer{
     margin-top: 50px;
     height: 200px;
     background-color: #000;
-    .footer-logo{
+
+    .footer_logo{
         margin-top: 20px;
         margin-left: 20px;
     }
+
 }
+
+
