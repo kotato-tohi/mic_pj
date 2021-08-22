@@ -8,8 +8,8 @@
 
 .main 
     .login_links 
-        a class="black_btn" href="" 今すぐ始める
-        a class="white_btn" href="" アカウントをお持ちの方
+        = link_to "今すぐ始める", "/users/sign_up", class: "black_btn"
+        = link_to "アカウントをお持ちの方", "/users/sign_in", class: "white_btn"
     
     .sub_msg_panel 
         h3 お困りですか？
