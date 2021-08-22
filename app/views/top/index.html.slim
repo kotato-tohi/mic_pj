@@ -1,12 +1,14 @@
 .top_header 
     / .top_logo 
     /     img src="/assets/logo-neg.svg" alt="logo-neg"/
+
     .top_main_msg 
         h3 必要最低限の在庫管理
         p 個人での利用に煩雑な管理は必要ありません
         p 必要な機能のみを提供します
 
 .main 
+    = link_to "ログアウト", "/users/sign_out", method: :delete
     .login_links 
         = link_to "今すぐ始める", "/users/sign_up", class: "black_btn"
         = link_to "アカウントをお持ちの方", "/users/sign_in", class: "white_btn"

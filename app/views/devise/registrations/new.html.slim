@@ -2,18 +2,22 @@
 
 .devise_panel 
     h3 サインアップ
-    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
         .field 
             = f.email_field :email, autofocus: true, autocomplete: "email", class: "input_box", placeholder: "メールアドレス"
 
         .field 
-            = f.password_field :password, autocomplete: "new-password", class: "input_box", placeholder: "パスワード"
-        
-        .field
-            = f.password_field :password_confirmation, autocomplete: "new-password", class: "input_box", placeholder: "パスワード再確認"
+            = f.password_field :password, autocomplete: "new-password", class: "input_box"
+            - if @minimum_password_length
+                em 
+                    = @minimum_password_length
+                    charset minimum
 
-        .action 
-            = f.submit "ログイン", class: "black_btn", id: "login_btn"
+        .field
+            = f.password_field :password_confirmation, autocomplete: "new-password", class: "input_box"
+
+        .actions
+            = f.submit "Sign up", class: "black_btn", id: "login_btn"
     
 
 .link_area 
