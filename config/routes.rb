@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   # root 'top#index'
   get '/', to: 'top#index'
+  get '/test', to: 'top#test'
   
-
 end

@@ -1,21 +1,23 @@
+= javascript_pack_tag 'footerFixed', 'data-turbolinks-track': 'reload'
 
 .devise_panel 
-    h3 ログイン
+    h3 サインアップ
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .field 
             = f.email_field :email, autofocus: true, autocomplete: "email", class: "input_box", placeholder: "メールアドレス"
 
         .field 
-            = f.password_field :password, autocomplete: "current-password", class: "input_box", placeholder: "パスワード"
+            = f.password_field :password, autocomplete: "new-password", class: "input_box", placeholder: "パスワード"
         
+        .field
+            = f.password_field :password_confirmation, autocomplete: "new-password", class: "input_box", placeholder: "パスワード再確認"
+
         .action 
             = f.submit "ログイン", class: "black_btn", id: "login_btn"
     
 
 .link_area 
     .link_wrap 
-        = link_to "新規登録へ", "/users/sign_up", class: "white_btn", id: "signup_btn"
+        = link_to "ログイン画面へ", "/users/sign_in", class: "white_btn", id: "signup_btn"
         = link_to "TOPへもどる", "/", class: "white_btn", id: "signup_btn"
-
-
 

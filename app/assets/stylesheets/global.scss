@@ -22,6 +22,7 @@ p{
 }
 
 
+// 黒ボタン
 .black_btn{
     display: block;
     text-align: center;
@@ -33,6 +34,7 @@ p{
     padding: 10px 0;
 }
 
+// 白ボタン
 .white_btn{
     display: block;
     text-align: center;
@@ -43,5 +45,32 @@ p{
     border-radius: 5px;  
     margin-left: auto;
     padding: 10px 0;
+
+}
+
+
+// 共通ヘッダー
+.header{
+    height: 100px;
+    width: 100%;
+    background-color: #000;
+    text-align: center;
+
+    img{
+        margin-top: 20px;
+    }
+    
+}
+
+// 共通フッター
+.footer{
+    
+    height: 100px;
+    width: 100%;
+    background-color: #000;
+    .footer_logo{
+        margin-top: 10px;
+        margin-left: 10px;
+    }
 
 }
