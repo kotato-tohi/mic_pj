@@ -8,14 +8,14 @@
             = f.email_field :email, autofocus: true, autocomplete: "email", class: "input_box", placeholder: "メールアドレス"
 
         .field 
-            = f.password_field :password, autocomplete: "new-password", class: "input_box"
+            = f.password_field :password, autocomplete: "new-password", class: "input_box", placeholder: "パスワード"
             / - if @minimum_password_length
             /     em 
             /         = @minimum_password_length
             /         charset minimum
 
         .field
-            = f.password_field :password_confirmation, autocomplete: "new-password", class: "input_box"
+            = f.password_field :password_confirmation, autocomplete: "new-password", class: "input_box", placeholder: "パスワード再確認"
 
         .actions
             = f.submit "Sign up", class: "black_btn", id: "login_btn"
