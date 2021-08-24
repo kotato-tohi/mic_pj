@@ -14,5 +14,7 @@
  *= require_self
  */
 
-
- 
+ body html {
+ -webkit-appearance: none;
+ -webkit-text-size-adjust: 100%;
+ }

@@ -24,6 +24,7 @@ p{
 
 // 黒ボタン
 .black_btn{
+    -webkit-appearance: none;
     display: block;
     text-align: center;
     width: 150px;
@@ -36,6 +37,7 @@ p{
 
 // 白ボタン
 .white_btn{
+    -webkit-appearance: none;
     display: block;
     text-align: center;
     width: 150px;
