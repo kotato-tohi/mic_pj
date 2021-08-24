@@ -1,47 +1,20 @@
-$black_btn-back_color:#000;
-$black_btn-font_color:#FFF;
-$white_btn-back_color: #FFF;
-$white_btn-font_color: #000;
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
 
-
-
-
-body{
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-}
-
-a{
-    text-decoration: none;
-}
-
-p{
-    margin: 0;
-}
-
-
-.black_btn{
-    display: block;
-    text-align: center;
-    width: 150px;
-    color: $black_btn-font_color;
-    background-color: $black_btn-back_color;
-    border: #000 solid 1px;
-    border-radius: 5px;
-    padding: 10px 0;
-}
-
-.white_btn{
-    display: block;
-    text-align: center;
-    width: 150px;
-    color: $white_btn-font_color;
-    background-color: $white_btn-back_color;
-    border: #000 solid 1px;
-    border-radius: 5px;  
-    margin-left: auto;
-    padding: 10px 0;
-
-}
+ body html {
+ -webkit-appearance: none;
+ -webkit-text-size-adjust: 100%;
+ }

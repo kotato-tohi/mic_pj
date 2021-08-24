@@ -1,0 +1,21 @@
+.devise_panel 
+    h3 ログイン
+ 
+    = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+  
+        .field 
+            = f.email_field :email, autofocus: true, autocomplete: "email", class: "input_box", placeholder: "メールアドレス"
+
+        .field 
+            = f.password_field :password, autocomplete: "current-password", class: "input_box", placeholder: "パスワード"
+        
+        .action 
+            = f.submit "ログイン", class: "black_btn", id: "login_btn"  
+
+.link_area 
+    .link_wrap 
+        = link_to "新規登録へ", "/users/sign_up", class: "white_btn", id: "signup_btn"
+        = link_to "TOPへもどる", "/", class: "white_btn", id: "signup_btn"
+
+
+

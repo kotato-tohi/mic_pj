@@ -4,5 +4,9 @@ class TopController < ApplicationController
 
     end
     
+    def test
+
+    end
+    
 
 end

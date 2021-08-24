@@ -1,0 +1,39 @@
+
+
+.devise_panel{
+    border: solid 1px #000;
+    width: 270px;
+    height: 300px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 30px;
+    box-shadow: 4px 4px 3px;
+    #login_btn{
+        margin: 0 auto;
+    }
+
+}
+
+.input_box{
+    height: 35px;
+    width: 150px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+}
+
+.link_area{
+    margin-top: 30px;
+    text-align: center;
+    .link_wrap{
+        display: flex;
+        margin: 0 auto;
+        width: 320px;
+        #signup_btn{
+            margin: 0 auto;
+            margin-top: 20px;
+        }
+
+    }
+
+}

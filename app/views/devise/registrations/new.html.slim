@@ -1,0 +1,22 @@
+.devise_panel 
+    h3 サインアップ
+    = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        == render "devise/shared/error_messages", resource: resource
+        .field 
+            = f.email_field :email, autofocus: true, autocomplete: "email", class: "input_box", placeholder: "メールアドレス"
+
+        .field 
+            = f.password_field :password, autocomplete: "new-password", class: "input_box", placeholder: "パスワード"
+
+        .field
+            = f.password_field :password_confirmation, autocomplete: "new-password", class: "input_box", placeholder: "パスワード再確認"
+
+        .actions
+            = f.submit "Sign up", class: "black_btn", id: "login_btn"
+    
+
+.link_area 
+    .link_wrap 
+        = link_to "ログイン画面へ", "/users/sign_in", class: "white_btn", id: "signup_btn"
+        = link_to "TOPへもどる", "/", class: "white_btn", id: "signup_btn"
+

@@ -1,15 +1,17 @@
-.header 
-    .top_logo 
-        img src="/assets/logo-neg.svg" alt="logo-neg"/
+.top_header 
+    / .top_logo 
+    /     img src="/assets/logo-neg.svg" alt="logo-neg"/
+
     .top_main_msg 
         h3 必要最低限の在庫管理
         p 個人での利用に煩雑な管理は必要ありません
         p 必要な機能のみを提供します
 
 .main 
+    = link_to "ログアウト", "/users/sign_out", method: :delete
     .login_links 
-        a class="black_btn" href="" 今すぐ始める
-        a class="white_btn" href="" アカウントをお持ちの方
+        = link_to "今すぐ始める", "/users/sign_up", class: "black_btn"
+        = link_to "アカウントをお持ちの方", "/users/sign_in", class: "white_btn"
     
     .sub_msg_panel 
         h3 お困りですか？
@@ -47,6 +49,6 @@
         p MICはシンプルな機能で
         p あなたに寄り添った管理を提供します
         a.black_btn.signup href=""  今すぐ始める
-.footer 
-    img.footer_logo src="assets/footer-logo.svg" alt="footer-logo"/
+/ .footer 
+/     img.footer_logo src="assets/footer-logo.svg" alt="footer-logo"/
     

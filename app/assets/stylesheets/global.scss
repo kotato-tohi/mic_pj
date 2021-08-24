@@ -1,0 +1,78 @@
+$black_btn-back_color:#000;
+$black_btn-font_color:#FFF;
+$white_btn-back_color: #FFF;
+$white_btn-font_color: #000;
+
+
+
+
+body{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+p{
+    margin: 0;
+}
+
+
+// 黒ボタン
+.black_btn{
+    -webkit-appearance: none;
+    display: block;
+    text-align: center;
+    width: 150px;
+    color: $black_btn-font_color;
+    background-color: $black_btn-back_color;
+    border: #000 solid 1px;
+    border-radius: 5px;
+    padding: 10px 0;
+}
+
+// 白ボタン
+.white_btn{
+    -webkit-appearance: none;
+    display: block;
+    text-align: center;
+    width: 150px;
+    color: $white_btn-font_color;
+    background-color: $white_btn-back_color;
+    border: #000 solid 1px;
+    border-radius: 5px;  
+    margin-left: auto;
+    padding: 10px 0;
+
+}
+
+
+// 共通ヘッダー
+.header{
+    height: 100px;
+    width: 100%;
+    background-color: #000;
+    text-align: center;
+
+    img{
+        margin-top: 20px;
+    }
+    
+}
+
+// 共通フッター
+.footer{
+    
+    height: 100px;
+    width: 100%;
+    background-color: #000;
+    .footer_logo{
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+}
