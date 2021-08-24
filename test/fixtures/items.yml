@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  storage: one
+  name: MyString
+  status: 1
+  shopping_list: false
+
+two:
+  storage: two
+  name: MyString
+  status: 1
+  shopping_list: false

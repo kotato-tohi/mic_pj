@@ -1,0 +1,8 @@
+= form_with model: @new_storage, url:storage_create_path do |form|
+    = form.text_field :name, placeholder: "ストレージ名"
+    = form.submit "作成"
+
+h3　ストレージ一覧
+
+h1 User 
+= current_user.email
