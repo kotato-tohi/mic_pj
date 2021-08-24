@@ -1,19 +1,8 @@
 .devise_panel 
     h3 ログイン
  
- 
- 
-    / - test = alert
-    
-    / javascript:
-    /     toastr.error(#{raw test.to_json})
-
-
-
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
   
-
-
         .field 
             = f.email_field :email, autofocus: true, autocomplete: "email", class: "input_box", placeholder: "メールアドレス"
 
@@ -21,8 +10,7 @@
             = f.password_field :password, autocomplete: "current-password", class: "input_box", placeholder: "パスワード"
         
         .action 
-            = f.submit "ログイン", class: "black_btn", id: "login_btn"
-    
+            = f.submit "ログイン", class: "black_btn", id: "login_btn"  
 
 .link_area 
     .link_wrap 
