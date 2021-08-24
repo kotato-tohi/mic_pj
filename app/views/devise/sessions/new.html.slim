@@ -1,7 +1,19 @@
-
 .devise_panel 
     h3 ログイン
+ 
+ 
+ 
+    / - test = alert
+    
+    / javascript:
+    /     toastr.error(#{raw test.to_json})
+
+
+
     = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+  
+
+
         .field 
             = f.email_field :email, autofocus: true, autocomplete: "email", class: "input_box", placeholder: "メールアドレス"
 
