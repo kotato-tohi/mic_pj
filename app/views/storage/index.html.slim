@@ -1,11 +1,9 @@
+
 = form_with model: @new_storage, url:storage_create_path do |form|
     = form.text_field :name, placeholder: "ストレージ名"
-    = form.submit "作成"
+    = form.submit "作成", class: "black_btn"
 
 h3　ストレージ一覧
-
-/ = current_user.name
-/ = @storage_ids
 
 - @storages.each do | storage |
     li = storage.name
