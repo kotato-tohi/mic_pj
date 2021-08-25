@@ -2,3 +2,39 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+.input_area{
+    text-align: center;
+    // background-color: red;
+    width: 330px;
+    margin: 0 auto;
+}
+
+#storage_name{
+    width: 320px;
+   
+}
+
+#create_storage_btn{
+    width: 70px;
+    margin-left: auto;
+  
+}
+
+.storage_list_area{
+    background-color: red;
+    .list_wrap{
+        display: block;
+        width: 320px;
+        background-color: gray;
+        display: flex;
+        padding: 10px;
+
+         
+
+    }
+
+    .list_wrap+.list_wrap{
+        margin-top: 10px;
+    }
+
+}
