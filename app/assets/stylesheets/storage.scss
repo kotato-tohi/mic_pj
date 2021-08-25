@@ -21,20 +21,42 @@
 }
 
 .storage_list_area{
-    background-color: red;
+   
     .list_wrap{
-        display: block;
-        width: 320px;
-        background-color: gray;
-        display: flex;
-        padding: 10px;
+        display: flex;  
+        margin: 0 10px;
+        border: solid 1px #000;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        .storage_info{
+            width:100%;
+            height: 60px;
+            .storage_name{
+                font-size: 24px;
+                margin-left: 5px;
+            }
 
-         
+            .storage_owner{
+                margin-left: 5px;
+            }
+        }
 
+        .action_links{
+            display: flex;
+            margin-left: auto;
+            #action_link{
+                display: block;
+                border-left: solid 1px #000;
+                width: 60px;
+                text-align: center;
+                background-color: #000;
+                .action_link_img{
+                    margin-top: 15px;
+                    
+                }
+            }
+        }
     }
 
-    .list_wrap+.list_wrap{
-        margin-top: 10px;
-    }
 
 }
