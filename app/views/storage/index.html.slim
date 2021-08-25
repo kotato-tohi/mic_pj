@@ -4,5 +4,14 @@
 
 h3　ストレージ一覧
 
-h1 User 
-= current_user.email
+/ = current_user.name
+/ = @storage_ids
+
+- @storages.each do | storage |
+    li = storage.name
+    li = return_user_name_from_id(storage.owner_id)
+    - if storage.owner_id == current_user.id 
+        li = link_to "削除", storage_delete_path(storage_id: storage.id), method: :delete
+        li = link_to "共有", storage_delete_path(storage_id: storage.id), method: :delete
+    - else 
+        li = link_to "共有解除", storage_delete_path(storage_id: storage.id), method: :delete

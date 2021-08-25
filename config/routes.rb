@@ -18,6 +18,8 @@ Rails.application.routes.draw do
 
   # storage controller
   get '/storage', to: 'storage#index', as: "storage_list"
-  post '/storage', to: 'storage#create', as: "storage_create"
+  post '/storage', to: 'storage#create_storage', as: "storage_create"
+  delete '/storage', to: 'storage#delete_storage', as: "storage_delete"
+
   
 end
