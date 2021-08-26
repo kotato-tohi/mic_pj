@@ -1,0 +1,25 @@
+.input_area
+    = form_with model: @new_item, url:item_create_path do |form|
+        = form.hidden_field :storage_id, :value => @current_storage_id
+        = form.text_field :name, placeholder: "アイテム名", class: "input_box", id: "item_name"
+        
+        .input_area_btns
+            = link_to "買物リストの作成", "/users/sign_in", class: "white_btn", id: "shopping_list_btn"
+            = form.submit "作成", class: "black_btn", id: "create_item_btn"
+
+h3 = @show_storage_name
+
+.list_area
+    - @items.each do | item |
+        - if item.shopping_list == false
+            .list_wrap
+                .list_info
+                    li.item = item.name 
+                    li.item = status_id_to_status_name(item.status)
+            
+                .action_links
+                    li#action_link = link_to image_tag("to-inc-icon.svg", class: "action_link_img", size: "30x30"), item_status_update_path(item_id: item.id, change_action_type: 1), method: :patch
+                    li#action_link = link_to image_tag("to-dec-icon.svg", class: "action_link_img", size: "30x30"), item_status_update_path(item_id: item.id, change_action_type: -1), method: :patch
+                    li#action_link = link_to image_tag("to-del-icon.svg", class: "action_link_img", size: "30x30"), item_status_update_path(item_id: item.id, change_action_type: 0), method: :patch
+    
+    / link_toでitemのidとactionのidを渡してchange_item_statusでどちらかの処理を実施 

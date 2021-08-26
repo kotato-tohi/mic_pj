@@ -1,4 +1,10 @@
 class StorageController < ApplicationController
+
+    FEW_STATUS = "わずか"
+    MIDDLE_STATUS = "半分くらい"
+    MANY_STATUS = "たくさん"
+
+
     def index
         @new_storage = Storage.new
         @storage_ids = return_storage_ids(current_user.id)
@@ -32,11 +38,23 @@ class StorageController < ApplicationController
                 format.html { redirect_to request.referer }
             end
         end
+    end
+
+
+    def show_inside_storage
+        show_storage_id = params[:storage_id]
+        show_storage = Storage.find(show_storage_id)
+        @show_storage_name = show_storage.name
+        @items = show_storage.items
+        @current_storage_id = show_storage_id
+
+        ## show_inside_storage.html.slim line 2 => item_controller#create_item_in_storage => DB
+        @new_item = Item.new
+    end
+
+
     
 
-
-
-    end
 
 
 
@@ -45,11 +63,11 @@ class StorageController < ApplicationController
 
 
     helper_method :return_user_name_from_id
-
-
+    helper_method :status_id_to_status_name
 
 
     private 
+
     
     # # ストレージIDとユーザIDを受け取ってLinkテーブルに紐付けを追加する
     def add_link_table_record(user_id, storage_id)
@@ -70,10 +88,15 @@ class StorageController < ApplicationController
 
 
 
+
     # strong params
     def storage_params
         params.require(:storage).permit(:name)
     end
+
+ 
+
+
 
     # ユーザIDからユーザ名を取得して返すヘルパーメソッド
     def return_user_name_from_id(user_id)
@@ -94,7 +117,19 @@ class StorageController < ApplicationController
         return storages
     end
 
+    ## アイテムのステータスIDを取得し文字にして返す
+    ## e.g. id:1 => "残りわずか" / id:3 => "まだまだある"
+    def status_id_to_status_name(status_id)
+        puts status_id
+        status_hash = {
+            1 => FEW_STATUS,
+            2 => MIDDLE_STATUS,
+            3 => MANY_STATUS
+        }
 
+        status_str = status_hash[status_id]
+        return status_hash[status_id]
+    end
     
 
     
