@@ -1,0 +1,26 @@
+.input_area
+    = form_with model: @new_storage, url:storage_create_path do |form|
+        = form.text_field :name, placeholder: "ストレージ名", class: "input_box", id: "storage_name"
+        = form.submit "作成", class: "black_btn", id: "create_storage_btn"
+
+h3　ストレージ一覧
+
+.storage_list_area
+
+    - @storages.each do | storage |
+        .list_wrap
+            .storage_info
+                .storage_name
+                    li = storage.name
+                .storage_owner
+                    li.storage_owner = return_user_name_from_id(storage.owner_id)
+            
+            .action_links
+                - if storage.owner_id == current_user.id 
+                    li#action_link  = link_to image_tag("to-share-icon.svg", class: "action_link_img", size: "30x30"), storage_delete_path(storage_id: storage.id), method: :delete
+                    li#action_link = link_to image_tag("to-list-icon.svg", class: "action_link_img", size: "30x30"), storage_delete_path(storage_id: storage.id), method: :delete
+                    li#action_link = link_to image_tag("to-del-icon.svg", class: "action_link_img", size: "30x30"), storage_delete_path(storage_id: storage.id), method: :delete, data:{confirm:"選択したストレージを削除しますか？"}
+                
+                - else 
+                    li#action_link = link_to image_tag("to-list-icon.svg", class: "action_link_img", size: "30x30"), storage_delete_path(storage_id: storage.id), method: :delete
+                    li#action_link = link_to image_tag("to-del-icon.svg", class: "action_link_img", size: "30x30"), storage_delete_path(storage_id: storage.id), method: :delete, data:{confirm:"選択したストレージの共有を解除しますか？"}

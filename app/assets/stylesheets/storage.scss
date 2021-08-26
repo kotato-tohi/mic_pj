@@ -1,0 +1,62 @@
+// Place all the styles related to the storage controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.input_area{
+    text-align: center;
+    // background-color: red;
+    width: 330px;
+    margin: 0 auto;
+}
+
+#storage_name{
+    width: 320px;
+   
+}
+
+#create_storage_btn{
+    width: 70px;
+    margin-left: auto;
+  
+}
+
+.storage_list_area{
+   
+    .list_wrap{
+        display: flex;  
+        margin: 0 10px;
+        border: solid 1px #000;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        .storage_info{
+            width:100%;
+            height: 60px;
+            .storage_name{
+                font-size: 24px;
+                margin-left: 5px;
+            }
+
+            .storage_owner{
+                margin-left: 5px;
+            }
+        }
+
+        .action_links{
+            display: flex;
+            margin-left: auto;
+            #action_link{
+                display: block;
+                border-left: solid 1px #000;
+                width: 60px;
+                text-align: center;
+                background-color: #000;
+                .action_link_img{
+                    margin-top: 15px;
+                    
+                }
+            }
+        }
+    }
+
+
+}
