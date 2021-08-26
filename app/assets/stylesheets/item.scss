@@ -1,3 +1,30 @@
 // Place all the styles related to the item controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+#item_name{
+    width: 320px;
+}
+
+#create_item_btn{
+    margin-left: auto;
+    width: 100px;
+}
+
+
+.item{
+    text-align: center;
+}
+
+
+.input_area_btns{
+    display: flex;
+    
+    #shopping_list_btn{
+        width: 200px;
+    }
+
+
+
+
+}
