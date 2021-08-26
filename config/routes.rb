@@ -21,5 +21,8 @@ Rails.application.routes.draw do
   post '/storage', to: 'storage#create_storage', as: "storage_create"
   delete '/storage', to: 'storage#delete_storage', as: "storage_delete"
 
-  
+  get '/storage/items', to: 'storage#show_inside_storage', as: "storage_show_inside"  
+  post '/storage/item', to: 'item#create_item_in_storage', as: "item_create"
+  patch '/storage/item/update', to: 'item#change_item_status', as: "item_status_update"
+
 end

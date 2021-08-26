@@ -1,0 +1,17 @@
+.input_area
+    = form_with model: @new_item, url:item_create_path do |form|
+        = form.hidden_field :storage_id, :value => @current_storage_id
+        = form.text_field :name, placeholder: "アイテム名", class: "input_box", id: "item_name"
+        = form.submit "作成", class: "black_btn", id: "create_item_btn"
+
+h3 = @show_storage_name
+
+- @items.each do | item |
+    - if item.shopping_list == false
+        li = item.name 
+        li = status_id_to_status_name(item.status)
+        li = link_to "インクリメント", item_status_update_path(item_id: item.id, change_action_type: 1), method: :patch
+        li = link_to "デクリメント", item_status_update_path(item_id: item.id, change_action_type: -1), method: :patch
+        li = link_to "削除", item_status_update_path(item_id: item.id, change_action_type: 0), method: :patch
+    
+    / link_toでitemのidとactionのidを渡してchange_item_statusでどちらかの処理を実施 

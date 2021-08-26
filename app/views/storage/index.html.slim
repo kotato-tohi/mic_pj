@@ -11,7 +11,7 @@ h3　ストレージ一覧
         .list_wrap
             .storage_info
                 .storage_name
-                    li = storage.name
+                    li = link_to storage.name , storage_show_inside_path(storage_id: storage.id)
                 .storage_owner
                     li.storage_owner = return_user_name_from_id(storage.owner_id)
             
